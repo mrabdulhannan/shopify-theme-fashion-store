@@ -123,9 +123,7 @@
      <div class="col-sm-4 col-lg-3 text-center text-sm-start">
                 <div class="main-logo">
                     <a href="{{ '/' | relative_url }}">
-                      
-                        <div class="header__heading-logo-wrapper">
-                {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+                      {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
                 {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
                 {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
                 {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
@@ -138,6 +136,8 @@
                   sizes: sizes,
                   preload: true
                 }}
+                        <div class="header__heading-logo-wrapper">
+                
               </div>
                     </a>
                 </div>
