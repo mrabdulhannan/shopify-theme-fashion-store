@@ -295,59 +295,7 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      <div
-        id="cookie-consent-banner"
-        style="display: none; position: fixed; bottom: 0; width: 100%; background: #000; color: #fff; padding: 20px; text-align: center;"
-      >
-        <p>
-          We use cookies to improve your experience on our site. By using our site, you consent to cookies.
-          <a href="/policies/privacy-policy" style="color: #fff; text-decoration: underline;">Learn more</a>
-        </p>
-        <button
-          id="accept-cookies"
-          style="background: #4CAF50; color: #fff; border: none; padding: 10px 20px; cursor: pointer;"
-        >
-          Accept
-        </button>
-      </div>
-      <script src="https://cdn.shopify.com/s/shopifycloud/shopify-customer-privacy-api/v1.0/shopify-customer-privacy-api.js"></script>
       
-      <script>
-        window.Shopify.loadFeatures(
-          [
-            {
-              name: 'consent-tracking-api',
-              version: '0.1',
-            },
-          ],
-          (error) => {
-            if (error) {
-              console.error('Error loading consent-tracking-api:', error);
-              return;
-            }
-
-            // The API is now ready to use
-            // Shopify.customerPrivacy.getConsentState().then(consentState => {
-            //   console.log('User consent state:', consentState);
-            //   if (!consentState.granted) {
-            //     // Show consent banner or handle lack of consent
-            //   }
-            // });
-          }
-        );
-        document.addEventListener('DOMContentLoaded', () => {
-          // checkMarketingConsent();
-          // console.log("preferencesProcessingStatus",window.Shopify.customerPrivacy.preferencesProcessingAllowed());
-          console.log('analyticsProcessingStatus', window.Shopify.customerPrivacy.analyticsProcessingAllowed());
-          console.log('MarketingAllowed', window.Shopify.customerPrivacy.marketingAllowed());
-          console.log('SaleofDataAllowed', window.Shopify.customerPrivacy.saleOfDataAllowed());
-          document.addEventListener('visitorConsentCollected', (event) => console.log(event.detail));
-        });
-      </script>
-
-      {{ 'custom-section.js' | asset_url | script_tag }}
-      {% section 'custom-section' %}
-
       {{ content_for_layout }}
     </main>
 
