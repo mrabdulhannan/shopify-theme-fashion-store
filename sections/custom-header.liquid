@@ -207,25 +207,16 @@
                         <option>Toy</option>
                     </select>
 
-                    <ul class="navbar-nav menu-list list-unstyled d-flex gap-md-3 mb-0">
-                        <li class="nav-item">
-                            <a href="{{ '/' | relative_url }}" class="nav-link active">Home</a>
-                        </li>
-                        {% for link in linklists.main-menu.links %}
-                            <li class="nav-item {% if link.links %}dropdown{% endif %}">
-                                <a class="nav-link {% if link.links %}dropdown-toggle{% endif %}" href="{{ link.url }}" {% if link.links %}role="button" id="{{ link.title | handleize }}" data-bs-toggle="dropdown" aria-expanded="false"{% endif %}>
-                                    {{ link.title }}
-                                </a>
-                                {% if link.links %}
-                                    <ul class="dropdown-menu" aria-labelledby="{{ link.title | handleize }}">
-                                        {% for childlink in link.links %}
-                                            <li><a href="{{ childlink.url }}" class="dropdown-item">{{ childlink.title }}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                {% endif %}
-                            </li>
-                        {% endfor %}
-                    </ul>
+                    {%- liquid
+      if section.settings.menu != blank
+        if section.settings.menu_type_desktop == 'dropdown'
+          render 'header-dropdown-menu'
+        elsif section.settings.menu_type_desktop != 'drawer'
+          render 'header-mega-menu'
+        endif
+      endif
+    %}
+                    
 
                     <div class="d-none d-lg-flex align-items-end">
                         <ul class="d-flex justify-content-end list-unstyled m-0">
