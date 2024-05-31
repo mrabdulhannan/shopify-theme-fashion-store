@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
+  var wishlist="";
+                                                    
   if(localStorage.getItem('wishlist')){
-    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
   }
   
 
