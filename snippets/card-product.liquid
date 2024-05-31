@@ -309,7 +309,7 @@
 
   document.querySelectorAll('.btn-wishlist').forEach(button => {
     button.addEventListener('click', function () {
-      console.log("this obejct",this);
+      console.log("this obejct",this.closest('.product'));
       const productId = this.getAttribute('data-product-id');
       const productName = this.closest('.product').querySelector('.product-title').innerText;
       const productUrl = this.closest('.product').querySelector('.product-link').href;
