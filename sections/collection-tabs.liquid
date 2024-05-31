@@ -1,0 +1,158 @@
+{% schema %}
+  {
+    "name": "Collection Tabs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Product Categories"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "tab",
+        "name": "Tab",
+        "settings": [
+          {
+            "type": "text",
+            "id": "tab_title",
+            "label": "Tab Title"
+          },
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Select Collection"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Default",
+        "category": "Collection",
+        "blocks": [
+          {
+            "type": "tab"
+          },
+          {
+            "type": "tab"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<div class="collection-tabs">
+  <h2>{{ section.settings.heading }}</h2>
+  <ul class="tab-titles">
+    {% for block in section.blocks %}
+      {% if block.type == 'tab' %}
+        <li class="tab-title" data-tab="#tab-{{ block.id }}">{{ block.settings.tab_title }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <div class="tab-contents">
+    {% for block in section.blocks %}
+      {% if block.type == 'tab' %}
+        <div class="tab-content" id="tab-{{ block.id }}">
+          {% assign collection = collections[block.settings.collection] %}
+          {% if collection.products_count > 0 %}
+            <ul class="product-grid">
+              {% for product in collection.products %}
+                <li class="product-item">
+                  <a href="{{ product.url }}">
+                    <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+                    <h3>{{ product.title }}</h3>
+                    <span>{{ product.price | money }}</span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p>No products found in this collection.</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.collection-tabs {
+  text-align: center;
+}
+.tab-titles {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.tab-title {
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+}
+.tab-title.active {
+  background: #fff;
+  border-bottom: none;
+}
+.tab-contents .tab-content {
+  display: none;
+}
+.tab-contents .tab-content.active {
+  display: block;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.product-item {
+  margin: 10px;
+  text-align: center;
+}
+.product-item img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var tabTitles = document.querySelectorAll('.tab-title');
+    var tabContents = document.querySelectorAll('.tab-content');
+
+    function activateTab(tabId) {
+      tabTitles.forEach(function(title) {
+        title.classList.remove('active');
+        if (title.dataset.tab === tabId) {
+          title.classList.add('active');
+        }
+      });
+
+      tabContents.forEach(function(content) {
+        content.classList.remove('active');
+        if (content.id === tabId) {
+          content.classList.add('active');
+        }
+      });
+    }
+
+    tabTitles.forEach(function(title) {
+      title.addEventListener('click', function() {
+        activateTab(title.dataset.tab);
+      });
+    });
+
+    // Activate the first tab by default
+    if (tabTitles.length > 0) {
+      activateTab(tabTitles[0].dataset.tab);
+    }
+  });
+</script>
