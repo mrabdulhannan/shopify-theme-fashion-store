@@ -309,6 +309,7 @@
 
   document.querySelectorAll('.btn-wishlist').forEach(button => {
     button.addEventListener('click', function () {
+      console.log("this obejct",this);
       const productId = this.getAttribute('data-product-id');
       const productName = this.closest('.product').querySelector('.product-title').innerText;
       const productUrl = this.closest('.product').querySelector('.product-link').href;
@@ -327,7 +328,6 @@
         alert('Product is already in the wishlist.');
       }
 
-      renderWishlist();
     });
   });
 
