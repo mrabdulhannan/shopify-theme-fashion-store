@@ -293,7 +293,7 @@
                       {%- endif -%}
                     </span>
                   
-                    <a href="#" data-product-id="{{ product.id }}"> Add to Wishlist </a>
+                    
                     <span class="sold-out-message hidden">
                       {{ 'products.product.sold_out' | t }}
                     </span>
@@ -303,6 +303,7 @@
                     {%- render 'loading-spinner' -%}
                   </button>
                 {%- endform -%}
+                <a href="#" data-product-id="{{ product.id }}"> Add to Wishlist </a>
               </product-form>
             {%- endif -%}
           </div>
