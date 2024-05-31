@@ -23,8 +23,9 @@
 </style>
 
 <script>
+
   document.addEventListener('DOMContentLoaded', function () {
-  const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+     const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
   function renderWishlist() {
     const wishlistContainer = document.getElementById('wishlist-items');
@@ -41,4 +42,6 @@
       wishlistContainer.appendChild(productElement);
     });
   }
+     renderWishlist();
+  });
 </script>
