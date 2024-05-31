@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var wishlist = [];
   if(localStorage.getItem('wishlist')){
     console.log("In If");
+    console.log(localStorage.getItem('wishlist'));
     wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
   }
   else{
