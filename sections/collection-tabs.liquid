@@ -58,9 +58,9 @@
       {% if block.type == 'tab' %}
         <div class="tab-content{% if forloop.first %} active{% endif %}" id="tab-{{ block.id }}">
           {% assign collection = collections[block.settings.collection] %}
-          {% if collection.products_count > 0 %}
+          {% if 1  > 0 %}
             <ul class="product-grid">
-              {% for product in collection.products %}
+              {% for product in collection.products  %}
                 <li class="product-item">
                   <a href="{{ product.url }}">
                     <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
