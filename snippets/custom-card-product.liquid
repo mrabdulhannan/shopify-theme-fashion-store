@@ -255,7 +255,9 @@
               </quick-add-modal>
             {%- else -%}
               <product-form data-section-id="{{ section.id }}">
-                {%- form 'product',
+                <div>
+                    <div>
+                        {%- form 'product',
                   card_product,
                   id: product_form_id,
                   class: 'form',
@@ -305,8 +307,13 @@
                   
                   
                 {%- endform -%}
-<script src="{{ 'wishlist.js' | asset_url }}"></script>
+                    </div>
+                  <div>
+                  <script src="{{ 'wishlist.js' | asset_url }}"></script>
 <button class="btn-wishlist" data-product-id="{{ card_product.id }}" data-product-title="{{ card_product.title }}" data-product-url="{{ card_product.url }}">Add to Wishlist</button>
+
+                  </div>
+                </div>
 
               </product-form>
             {%- endif -%}
