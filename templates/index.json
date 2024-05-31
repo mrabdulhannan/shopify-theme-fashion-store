@@ -129,14 +129,14 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/1_c7eea274-513c-48d2-bcd1-acd259326b94.png",
-            "heading": "Best Destination for Your Pets",
+            "heading": "Best Destination  for Your Pets",
             "heading_size": "h1",
             "subheading": "",
             "discounttag": "Save 10-20% Off",
             "discounttag_color": "#FF0000",
             "content_container_backgroung": "rgba(0,0,0,0)",
             "button_label": "SHOP NOW",
-            "link": "",
+            "link": "#",
             "button_style_secondary": false,
             "box_align": "middle-right",
             "show_text_box": true,
@@ -192,9 +192,12 @@
         "slide_iaBzKa",
         "slide_YY9R36"
       ],
+      "custom_css": [
+        ".slideshow__media.banner__media.media img {object-fit: contain;}"
+      ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "medium",
+        "slide_height": "adapt_image",
         "slider_visual": "dots",
         "auto_rotate": false,
         "change_slides_speed": 5,
