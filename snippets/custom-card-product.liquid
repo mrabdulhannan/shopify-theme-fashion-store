@@ -305,7 +305,7 @@
                   {%- endform -%}
 
 
-<button class="btn-wishlist" data-product-id="{{ card_product.id }}" data-product-title="{{ card_product.title }}" data-product-url="{{ card_product.url }}">Add to Wishlist</button>                
+<button class="btn-wishlist quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}" data-product-id="{{ card_product.id }}" data-product-title="{{ card_product.title }}" data-product-url="{{ card_product.url }}">Add to Wishlist</button>                
 
 
               </product-form>
