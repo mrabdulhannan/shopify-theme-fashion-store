@@ -49,14 +49,14 @@
   <ul class="tab-titles">
     {% for block in section.blocks %}
       {% if block.type == 'tab' %}
-        <li class="tab-title" data-tab="#tab-{{ block.id }}">{{ block.settings.tab_title }}</li>
+        <li class="tab-title{% if forloop.first %} active{% endif %}" data-tab="#tab-{{ block.id }}">{{ block.settings.tab_title }}</li>
       {% endif %}
     {% endfor %}
   </ul>
   <div class="tab-contents">
     {% for block in section.blocks %}
       {% if block.type == 'tab' %}
-        <div class="tab-content" id="tab-{{ block.id }}">
+        <div class="tab-content{% if forloop.first %} active{% endif %}" id="tab-{{ block.id }}">
           {% assign collection = collections[block.settings.collection] %}
           {% if collection.products_count > 0 %}
             <ul class="product-grid">
