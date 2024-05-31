@@ -146,39 +146,41 @@
             "text_alignment_mobile": "center"
           }
         },
-        "slide_iaBzKa": {
+        "slide_VWaR9a": {
           "type": "slide",
           "settings": {
-            "heading": "Image slide",
+            "image": "shopify:\/\/shop_images\/2_ebd913fa-ceed-4c27-add3-ee90507a4140.png",
+            "heading": "Best Destination  for Your Pets",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "discounttag": "99% Off",
+            "subheading": "",
+            "discounttag": "Save 10-20% Off",
             "discounttag_color": "#FF0000",
-            "content_container_backgroung": "#FF0000",
-            "button_label": "Button label",
-            "link": "",
+            "content_container_backgroung": "rgba(0,0,0,0)",
+            "button_label": "SHOP NOW",
+            "link": "#",
             "button_style_secondary": false,
-            "box_align": "middle-center",
+            "box_align": "middle-right",
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
+            "color_scheme": "",
             "text_alignment_mobile": "center"
           }
         },
-        "slide_YY9R36": {
+        "slide_jfixiz": {
           "type": "slide",
           "settings": {
-            "heading": "Image slide",
+            "image": "shopify:\/\/shop_images\/3_125b01bc-4797-44a4-9f63-ac24c041f7ab.png",
+            "heading": "Best Destination  for Your Pets",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "discounttag": "99% Off",
+            "subheading": "",
+            "discounttag": "Save 10-20% Off",
             "discounttag_color": "#FF0000",
-            "content_container_backgroung": "#FF0000",
-            "button_label": "Button label",
-            "link": "",
+            "content_container_backgroung": "rgba(0,0,0,0)",
+            "button_label": "SHOP NOW",
+            "link": "#",
             "button_style_secondary": false,
-            "box_align": "middle-center",
+            "box_align": "middle-right",
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
@@ -189,8 +191,8 @@
       },
       "block_order": [
         "slide_qMyn4t",
-        "slide_iaBzKa",
-        "slide_YY9R36"
+        "slide_VWaR9a",
+        "slide_jfixiz"
       ],
       "custom_css": [
         ".slideshow__media.banner__media.media img {object-fit: contain;}"
