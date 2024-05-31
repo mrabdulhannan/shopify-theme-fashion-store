@@ -303,38 +303,10 @@
                     {%- render 'loading-spinner' -%}
                   </button>
                 {%- endform -%}
-                <script>
-                document.addEventListener('DOMContentLoaded', function () {
- 
+<script src="{{ 'wishlist.js' | asset_url }}"></script>
 
-  document.querySelectorAll('.btn-wishlist').forEach(button => {
-    button.addEventListener('click', function () {
-      console.log("this obejct",this.closest('.product'));
-      const productId = this.getAttribute('data-product-id');
-      const productName = this.closest('.product').querySelector('.product-title').innerText;
-      const productUrl = this.closest('.product').querySelector('.product-link').href;
+                <button class="btn-wishlist" data-product-id="{{ card_product.id }}" data-product-title="{{ card_product.title }}" data-product-url="{{ card_product.url }}">Add to Wishlist</button>
 
-      const product = {
-        id: productId,
-        name: productName,
-        url: productUrl,
-      };
-
-      if (!wishlist.some(item => item.id === productId)) {
-        wishlist.push(product);
-        localStorage.setItem('wishlist', JSON.stringify(wishlist));
-        alert('Product added to wishlist!');
-      } else {
-        alert('Product is already in the wishlist.');
-      }
-
-    });
-  });
-
- 
-});
-</script>
-                <button class="btn-wishlist" data-product-id="{{ card_product.id }}">Add to Wishlist</button>
               </product-form>
             {%- endif -%}
           </div>
