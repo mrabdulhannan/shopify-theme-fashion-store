@@ -164,38 +164,6 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "custom_css": [
-        ".card__content .card__information .card__heading {font-size: 25px; text-align: left; padding-left: 10px;}",
-        ".card__content .card__information .card-information .price {font-size: 25px; color: #dead6f;}"
-      ],
-      "settings": {
-        "title": "Pet Clothing",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "pet-clothing",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": true,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
     "custom_featured_collection_hKRWwM": {
       "type": "custom-featured-collection",
       "custom_css": [
@@ -232,7 +200,6 @@
   "order": [
     "custom_slideshow_LYtA7c",
     "multicolumn_YmRQfW",
-    "featured_collection",
     "custom_featured_collection_hKRWwM"
   ]
 }
