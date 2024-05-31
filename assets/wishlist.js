@@ -11,23 +11,23 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   
 
-  // function renderWishlist() {
-  //   const wishlistContainer = document.getElementById('wishlist-items');
-  //   if (wishlistContainer) {
-  //     wishlistContainer.innerHTML = '';
+  function renderWishlist() {
+    const wishlistContainer = document.getElementById('wishlist-items');
+    if (wishlistContainer) {
+      wishlistContainer.innerHTML = '';
 
-  //     wishlist.forEach(product => {
-  //       const productElement = document.createElement('div');
-  //       productElement.innerHTML = `
-  //         <div class="wishlist-item">
-  //           <h3>${product.title}</h3>
-  //           <a href="${product.url}">View Product</a>
-  //         </div>
-  //       `;
-  //       wishlistContainer.appendChild(productElement);
-  //     });
-  //   }
-  // }
+      wishlist.forEach(product => {
+        const productElement = document.createElement('div');
+        productElement.innerHTML = `
+          <div class="wishlist-item">
+            <h3>${product.title}</h3>
+            <a href="${product.url}">View Product</a>
+          </div>
+        `;
+        wishlistContainer.appendChild(productElement);
+      });
+    }
+  }
 
   document.querySelectorAll('.btn-wishlist').forEach(button => {
     button.addEventListener('click', function () {
@@ -41,13 +41,13 @@ document.addEventListener('DOMContentLoaded', function () {
         url: productUrl,
       };
 
-      // // if (!wishlist.some(item => item.id === productId)) {
+      // if (!wishlist.some(item => item.id === productId)) {
         wishlist.push(product);
         localStorage.setItem('wishlist', JSON.stringify(wishlist));
         // alert('Product added to wishlist!');
-      // } else {
+      } else {
         // alert('Product is already in the wishlist.');
-      // }
+      }
 
       // renderWishlist();
     });
