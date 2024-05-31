@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         url: productUrl,
       };
 
-      // if (!wishlist.some(item => item.id === productId)) {
+      if (!wishlist.some(item => item.id === productId)) {
         wishlist.push(product);
         localStorage.setItem('wishlist', JSON.stringify(wishlist));
         // alert('Product added to wishlist!');
