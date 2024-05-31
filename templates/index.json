@@ -196,27 +196,27 @@
         "padding_bottom": 36
       }
     },
-    "collection_tabs_TCerjD": {
+    "collection_tabs_XB9XnN": {
       "type": "collection-tabs",
       "blocks": {
-        "tab_t99xXx": {
+        "tab_wtKYip": {
           "type": "tab",
           "settings": {
-            "tab_title": "Pet Clothing",
+            "tab_title": "Clothing",
             "collection": "pet-clothing"
           }
         },
-        "tab_39MLae": {
+        "tab_GrfXLi": {
           "type": "tab",
           "settings": {
-            "tab_title": "Pet Food",
+            "tab_title": "Food",
             "collection": "pet-clothing"
           }
         }
       },
       "block_order": [
-        "tab_t99xXx",
-        "tab_39MLae"
+        "tab_wtKYip",
+        "tab_GrfXLi"
       ],
       "settings": {
         "heading": "Product Categories"
@@ -227,6 +227,6 @@
     "custom_slideshow_LYtA7c",
     "multicolumn_YmRQfW",
     "custom_featured_collection_hKRWwM",
-    "collection_tabs_TCerjD"
+    "collection_tabs_XB9XnN"
   ]
 }
