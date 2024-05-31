@@ -303,7 +303,7 @@
                     {%- render 'loading-spinner' -%}
                   </button>
                 {%- endform -%}
-                
+                <script src="{{ 'wishlist.js' | asset_url }}"></script>
                 <button class="btn-wishlist" data-product-id="{{ product.id }}">Add to Wishlist</button>
               </product-form>
             {%- endif -%}
