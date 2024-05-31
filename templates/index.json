@@ -195,11 +195,25 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "product_carausal_qMBBKf": {
+      "type": "product-carausal",
+      "settings": {
+        "section_title": "Popular products",
+        "section_bg_color": "",
+        "section_collection": "pet-clothing",
+        "products_count": "4",
+        "carousel_rows": "1",
+        "carousel_direction": "1",
+        "img_size": "small",
+        "img_alignment": "top"
+      }
     }
   },
   "order": [
     "custom_slideshow_LYtA7c",
     "multicolumn_YmRQfW",
-    "featured_collection"
+    "featured_collection",
+    "product_carausal_qMBBKf"
   ]
 }
