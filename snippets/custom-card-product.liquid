@@ -302,12 +302,12 @@
                     {%- endif -%}
                     {%- render 'loading-spinner' -%}
                   </button>
-                  <a href="#" class="btn-wishlist" data-product-id="{{ card_product.id }}" data-product-title="{{ card_product.title }}" data-product-url="{{ card_product.url }}">Add to Wishlist</a>
-
+                  
                   
                 {%- endform -%}
 <span>
 <script src="{{ 'wishlist.js' | asset_url }}"></script>
+<button class="btn-wishlist" data-product-id="{{ card_product.id }}" data-product-title="{{ card_product.title }}" data-product-url="{{ card_product.url }}">Add to Wishlist</button>
 </span>
 
               </product-form>
