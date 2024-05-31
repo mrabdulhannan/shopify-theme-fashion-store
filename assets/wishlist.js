@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!wishlist.some(item => item.id === productId)) {
         wishlist.push(product);
         localStorage.setItem('wishlist', JSON.stringify(wishlist));
-        alert('Product added to wishlist!');
+        // alert('Product added to wishlist!');
       } else {
-        alert('Product is already in the wishlist.');
+        // alert('Product is already in the wishlist.');
       }
 
       renderWishlist();
