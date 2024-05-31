@@ -205,7 +205,7 @@
         "products_count": "4",
         "carousel_rows": "1",
         "carousel_direction": "1",
-        "img_size": "small",
+        "img_size": "large",
         "img_alignment": "top"
       }
     }
