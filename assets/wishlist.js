@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  document.querySelectorAll('.btn-wishlist').forEach(button => {
+  document.querySelectorAll('.btn-wishlist').forEach(a => {
     a.addEventListener('click', function () {
       const productId = this.getAttribute('data-product-id');
       const productTitle = this.getAttribute('data-product-title');
