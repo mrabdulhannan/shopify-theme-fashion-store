@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
   // var wishlist = "";
-  const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+  if(localStorage.getItem('wishlist')){
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+  }
+  else{
+    const wishlist = [];
+  }
+  
 
   // function renderWishlist() {
   //   const wishlistContainer = document.getElementById('wishlist-items');
