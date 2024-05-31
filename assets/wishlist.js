@@ -39,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // alert('Product is already in the wishlist.');
       }
 
-      renderWishlist();
+      // renderWishlist();
     });
   });
 
-  renderWishlist();
+  // renderWishlist();
 });
